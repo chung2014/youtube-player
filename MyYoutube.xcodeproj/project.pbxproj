@@ -19,6 +19,7 @@
 		F248CE9B23D3762F00D6BE85 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */; };
 		F248CE9D23D386FA00D6BE85 /* DownloadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */; };
 		F248CE9F23D38A4900D6BE85 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */; };
+		F2BF67DE23DE1E60009DF469 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUtils.swift; sourceTree = "<group>"; };
 		F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		FC1405931C72C7F38E0073B8 /* Pods-MyYoutube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyYoutube.release.xcconfig"; path = "Target Support Files/Pods-MyYoutube/Pods-MyYoutube.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */,
 				F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */,
 				F2082B9623D419E7007DFD25 /* ApiClient.swift */,
+				F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */,
 			);
 			path = MyYoutube;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				F2082B9723D419E7007DFD25 /* ApiClient.swift in Sources */,
 				F248CE8523D36F6E00D6BE85 /* SceneDelegate.swift in Sources */,
 				F248CE9723D3700C00D6BE85 /* MainViewController.swift in Sources */,
+				F2BF67DE23DE1E60009DF469 /* LoadingCell.swift in Sources */,
 				F248CE9B23D3762F00D6BE85 /* SummaryCell.swift in Sources */,
 				F248CE9F23D38A4900D6BE85 /* DetailViewController.swift in Sources */,
 			);

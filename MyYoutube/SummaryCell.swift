@@ -55,13 +55,18 @@ class SummaryCell: UITableViewCell {
         self.addSubview(imageViewContainer)
         self.addSubview(titleLabel)
         self.addSubview(descLabel)
+        
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+//    override func layoutSubviews() {
+    func setupViews() {
+        
+//        backgroundColor = UIColor.yellow
         
         thumbnailImageView.topAnchor.constraint(equalTo: imageViewContainer.topAnchor).isActive = true
         thumbnailImageView.bottomAnchor.constraint(equalTo: imageViewContainer.bottomAnchor).isActive = true

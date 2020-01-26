@@ -13,16 +13,24 @@ class ApiClient {
     static let shared = ApiClient()
     
 //    let host = "https://leqc5h60ka.execute-api.ap-southeast-1.amazonaws.com/prod"
-//    let host = "http://localhost:3000"
-    let host = "https://chung2014.hopto.org"
+    let host = "http://localhost:3000"
+//    let host = "https://chung2014.hopto.org"
+    
+    var searchingResultDataList = [String:[YoutubeItem]]()
+    var searchingResultNextPage = [String:String]()
     
     private init() {}
     
     func searchText(text: String, completion: @escaping (String?, [YoutubeItem]) -> Void) {
-        let parameters = [
-            "searchText": text
+        var parameters = [
+            "q": text
         ]
-        AF.request("\(host)/api/searchyoutube", parameters: parameters).responseJSON { (response) in
+        
+        if searchingResultNextPage[text] != nil {
+            parameters["pageToken"] = searchingResultNextPage[text]
+        }
+        
+        AF.request("\(host)/api/searchyoutube", parameters: parameters).responseJSON { [unowned self] (response) in
             let json = response.value as! NSDictionary
             let items = json.value(forKeyPath: "result.items") as! [NSDictionary]
             let list = items.map { (object) -> YoutubeItem in
@@ -33,7 +41,16 @@ class ApiClient {
                 return YoutubeItem(id: id, thumbnail: thumbnail, title: title, description: description)
             }
             
-            completion(nil, list)
+            if self.searchingResultDataList[text] == nil {
+                self.searchingResultDataList[text] = []
+            }
+            
+            self.searchingResultDataList[text]!.append(contentsOf: list)
+            
+            let nextPageId = json.value(forKeyPath: "result.nextPageToken") as! String
+            self.searchingResultNextPage[text] = nextPageId
+            
+            completion(nil, self.searchingResultDataList[text]!)
         }
     }
     
