@@ -32,6 +32,7 @@
                     <navigationItem key="navigationItem" title="Search" id="F5j-oq-aaa"/>
                     <connections>
                         <outlet property="tableView" destination="NSj-RZ-H5Z" id="9If-QI-pGa"/>
+                        <segue destination="jM6-c7-GxA" kind="show" identifier="showdetail" id="JbP-cc-g3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -221,4 +222,7 @@
             <point key="canvasLocation" x="1966.6666666666667" y="828.34821428571422"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JbP-cc-g3w"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,8 @@ class ApiClient {
     static let shared = ApiClient()
     
 //    let host = "https://leqc5h60ka.execute-api.ap-southeast-1.amazonaws.com/prod"
-    let host = "http://localhost:3000"
-//    let host = "https://chung2014.hopto.org"
+//    let host = "http://localhost:3000"
+    let host = "https://chung2014.hopto.org"
     
     var searchingResultDataList = [String:[YoutubeItem]]()
     var searchingResultNextPage = [String:String]()
