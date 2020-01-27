@@ -8,5 +8,6 @@ target 'MyYoutube' do
   # Pods for MyYoutube
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'SDWebImage', '~> 5.0'
+  pod 'RealmSwift'
 
 end

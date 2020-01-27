@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MyYoutube" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Main" id="F5j-oq-aaa"/>
+                    <navigationItem key="navigationItem" title="Search" id="F5j-oq-aaa"/>
                     <connections>
                         <outlet property="tableView" destination="NSj-RZ-H5Z" id="9If-QI-pGa"/>
                         <segue destination="fWN-2q-6OH" kind="show" identifier="showdetail" id="DZo-Qx-rcT"/>
@@ -38,6 +38,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Downloaded-->
+        <scene sceneID="HSi-pC-NUW">
+            <objects>
+                <viewController id="rU4-Ee-wPt" customClass="DownloadedViewController" customModule="MyYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2I-RO-QiI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TGz-Nq-nnt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TGz-Nq-nnt" firstAttribute="leading" secondItem="Yzw-ZX-jMS" secondAttribute="leading" id="DyP-QG-ld5"/>
+                            <constraint firstItem="TGz-Nq-nnt" firstAttribute="trailing" secondItem="Yzw-ZX-jMS" secondAttribute="trailing" id="FhU-PJ-LsY"/>
+                            <constraint firstItem="TGz-Nq-nnt" firstAttribute="bottom" secondItem="Yzw-ZX-jMS" secondAttribute="bottom" id="XY7-lF-zSl"/>
+                            <constraint firstItem="TGz-Nq-nnt" firstAttribute="top" secondItem="Yzw-ZX-jMS" secondAttribute="top" id="s30-7C-fAv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yzw-ZX-jMS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Downloaded" id="Q5x-dq-nc1"/>
+                    <connections>
+                        <outlet property="tableView" destination="TGz-Nq-nnt" id="f8I-iH-1ZM"/>
+                        <segue destination="fWN-2q-6OH" kind="show" identifier="showdetail" id="FMp-qc-XcZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQd-aK-xqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="834"/>
         </scene>
         <!--Detail-->
         <scene sceneID="PYr-nJ-PZo">
@@ -142,5 +174,26 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v7y-gf-FfV">
+            <objects>
+                <navigationController storyboardIdentifier="DOWNLOADED" automaticallyAdjustsScrollViewInsets="NO" id="eno-h8-6iI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lt2-5g-yhs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rU4-Ee-wPt" kind="relationship" relationship="rootViewController" id="eoh-g2-kGb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snK-ym-OsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="834"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FMp-qc-XcZ"/>
+    </inferredMetricsTieBreakers>
 </document>

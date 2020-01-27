@@ -9,8 +9,12 @@
 import UIKit
 import AVFoundation
 import SDWebImage
+import RealmSwift
 
 class DetailViewController: UIViewController {
+    
+    let realm = try! Realm()
+    
     var item: YoutubeItem!
     var songPlayer = AVAudioPlayer()
     var isSongReady = false {
@@ -72,16 +76,24 @@ class DetailViewController: UIViewController {
         imageView.sd_setImage(with: URL(string: item.thumbnail)!, completed: nil)
 //        self.view.backgroundColor = UIColor.yellow
         print(item.id)
+        // TODO: change to check db
         if DownloadUtils.shared.checkVideoExist(videoId: item.id) {
             self.isSongReady = true
         } else {
             self.downloadStatusLabel.text = "Start Downloading..."
-            DownloadUtils.shared.startDownload(videoId: item.id, completed: { errorMsg in
+            DownloadUtils.shared.startDownload(videoId: item.id, completed: { [weak self] (errorMsg, filePath) in
                 DispatchQueue.main.async {
+                    guard let self = self else { return }
                     if let errorMsg = errorMsg {
                         self.downloadStatusLabel.text = "ERROR: " + errorMsg
                         return
                     }
+                    
+                    try! self.realm.write {
+                        self.item.filePathString = filePath ?? ""
+                        self.realm.add(self.item)
+                    }
+                    
                     self.isSongReady = true
                 }
             })

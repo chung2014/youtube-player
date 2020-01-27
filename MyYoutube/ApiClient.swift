@@ -31,6 +31,29 @@ class ApiClient {
         }
         
         AF.request("\(host)/api/searchyoutube", parameters: parameters).responseJSON { [unowned self] (response) in
+            if let error = response.error {
+                let statusCode = response.response?.statusCode ?? -1
+                completion("msg:\(error.localizedDescription) | statusCode: \(statusCode)", [])
+                return
+            }
+            if (response.data == nil) {
+                completion("no data", [])
+                return
+            }
+            if let statusCode = response.response?.statusCode {
+                var errorMsg = "(server error)"
+                if let json = response.value as? NSDictionary {
+                    if let error = json.value(forKeyPath: "error") as? String {
+                        errorMsg = "\(error) | \(errorMsg)"
+                    }
+                }
+                
+                if statusCode >= 400 {
+                    completion("\(errorMsg) | statusCode: \(statusCode)", [])
+                    return
+                }
+            }
+            
             let json = response.value as! NSDictionary
             let items = json.value(forKeyPath: "result.items") as! [NSDictionary]
             let list = items.map { (object) -> YoutubeItem in
@@ -38,7 +61,12 @@ class ApiClient {
                 let thumbnail = object.value(forKeyPath: "snippet.thumbnails.default.url") as! String
                 let title = object.value(forKeyPath: "snippet.title") as! String
                 let description = object.value(forKeyPath: "snippet.description") as! String
-                return YoutubeItem(id: id, thumbnail: thumbnail, title: title, description: description)
+                let item = YoutubeItem()
+                item.id = id
+                item.thumbnail = thumbnail
+                item.title = title
+                item.videoDescription = description
+                return item
             }
             
             if self.searchingResultDataList[text] == nil {

@@ -27,6 +27,15 @@ class MainViewController: UIViewController {
         ApiClient.shared.searchText(text: text) { (errMsg, items) in
             DispatchQueue.main.async {
                 
+                if let errMsg = errMsg {
+                    let alert = UIAlertController.init(title: "Error", message: errMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    self.fetchingMore = false
+                    self.tableView.reloadData()
+                    return
+                }
+                
                 if !self.isFirstBatchResultLoaded {
                     self.isFirstBatchResultLoaded = true
                 }
@@ -86,7 +95,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SummaryCell
                    
                    cell.titleLabel.text = list[indexPath.row].title
-                   cell.descLabel.text = list[indexPath.row].description
+                   cell.descLabel.text = list[indexPath.row].videoDescription
                    cell.setThumbnail(string: list[indexPath.row].thumbnail)
                    
                    return cell

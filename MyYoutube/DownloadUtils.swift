@@ -14,7 +14,7 @@ class DownloadUtils {
         
     private init() {}
     
-    func startDownload(videoId: String, completed: @escaping (String?) -> Void) -> Void {
+    func startDownload(videoId: String, completed: @escaping (String?, String?) -> Void) -> Void {
         let apiUrl = "\(ApiClient.shared.host)/api/getmp3/\(videoId)"
         let fileUrl = self.getSaveFileUrl(fileName: apiUrl)
         let destination: DownloadRequest.Destination = { _, _ in
@@ -23,7 +23,7 @@ class DownloadUtils {
 
         AF.download(apiUrl, to:destination).response { (response) in
             debugPrint(response)
-            completed(nil)
+            completed(nil, fileUrl.path)
         }
     }
 

@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct YoutubeItem: Codable {
-    let id: String
-    let thumbnail: String
-    let title: String
-    let description: String
+class YoutubeItem: Object, Codable {
+    @objc dynamic var id: String = ""
+    @objc dynamic var thumbnail: String = ""
+    @objc dynamic var title: String = ""
+    @objc dynamic var videoDescription: String = ""
+    @objc dynamic var filePathString = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
