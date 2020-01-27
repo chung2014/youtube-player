@@ -75,6 +75,10 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         imageView.sd_setImage(with: URL(string: item.thumbnail)!, completed: nil)
 //        self.view.backgroundColor = UIColor.yellow
+        titleLabel.text = item.title
+        titleLabel.numberOfLines = 0
+        descLabel.text = item.videoDescription
+        descLabel.numberOfLines = 0
         print(item.id)
         // TODO: change to check db
         if DownloadUtils.shared.checkVideoExist(videoId: item.id) {

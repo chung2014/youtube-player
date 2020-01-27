@@ -15,7 +15,7 @@ class SummaryCell: UITableViewCell {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
-        view.backgroundColor = UIColor.blue
+//        view.backgroundColor = UIColor.blue
         return view
     }()
     
@@ -29,14 +29,14 @@ class SummaryCell: UITableViewCell {
     var titleLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.green
+//        label.backgroundColor = UIColor.green
         return label
     }()
     
     var descLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.blue
+//        label.backgroundColor = UIColor.blue
         label.numberOfLines = 0
         return label
     }()
