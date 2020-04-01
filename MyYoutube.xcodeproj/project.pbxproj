@@ -17,9 +17,11 @@
 		F248CE9723D3700C00D6BE85 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9623D3700C00D6BE85 /* MainViewController.swift */; };
 		F248CE9923D3729700D6BE85 /* YoutubeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9823D3729700D6BE85 /* YoutubeItem.swift */; };
 		F248CE9B23D3762F00D6BE85 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */; };
-		F248CE9D23D386FA00D6BE85 /* DownloadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */; };
 		F248CE9F23D38A4900D6BE85 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */; };
+		F264443C2434A355007A6CD2 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F264443B2434A355007A6CD2 /* MiniPlayerView.swift */; };
 		F29D381923DE8FE200384C73 /* DownloadedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D381823DE8FE200384C73 /* DownloadedViewController.swift */; };
+		F2B8F5842434952F0093BF13 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8F5822434952F0093BF13 /* PlayerManager.swift */; };
+		F2B8F5852434952F0093BF13 /* DownloadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8F5832434952F0093BF13 /* DownloadUtils.swift */; };
 		F2BF67DE23DE1E60009DF469 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,7 @@
 		0CE65BCB32620C66B4CF58B7 /* Pods_MyYoutube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyYoutube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB4A5A7930F66F513032E10 /* Pods-MyYoutube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyYoutube.debug.xcconfig"; path = "Target Support Files/Pods-MyYoutube/Pods-MyYoutube.debug.xcconfig"; sourceTree = "<group>"; };
 		F2082B9623D419E7007DFD25 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		F248CE7F23D36F6E00D6BE85 /* MyYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F248CE7F23D36F6E00D6BE85 /* Listen Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listen Youtube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248CE8223D36F6E00D6BE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F248CE8423D36F6E00D6BE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F248CE8923D36F6E00D6BE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,9 +39,11 @@
 		F248CE9623D3700C00D6BE85 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F248CE9823D3729700D6BE85 /* YoutubeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeItem.swift; sourceTree = "<group>"; };
 		F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
-		F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUtils.swift; sourceTree = "<group>"; };
 		F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F264443B2434A355007A6CD2 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		F29D381823DE8FE200384C73 /* DownloadedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedViewController.swift; sourceTree = "<group>"; };
+		F2B8F5822434952F0093BF13 /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		F2B8F5832434952F0093BF13 /* DownloadUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadUtils.swift; sourceTree = "<group>"; };
 		F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		FC1405931C72C7F38E0073B8 /* Pods-MyYoutube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyYoutube.release.xcconfig"; path = "Target Support Files/Pods-MyYoutube/Pods-MyYoutube.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +90,7 @@
 		F248CE8023D36F6E00D6BE85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F248CE7F23D36F6E00D6BE85 /* MyYoutube.app */,
+				F248CE7F23D36F6E00D6BE85 /* Listen Youtube.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,22 +98,88 @@
 		F248CE8123D36F6E00D6BE85 /* MyYoutube */ = {
 			isa = PBXGroup;
 			children = (
+				F264443D2434AED7007A6CD2 /* MiniPlayer */,
+				F264443A24349FBA007A6CD2 /* Detail */,
+				F264443924349F83007A6CD2 /* Downloaded */,
+				F264443824349F7A007A6CD2 /* Search */,
+				F264443724349F5B007A6CD2 /* Shared */,
+				F2B8F581243488B70093BF13 /* Player */,
 				F248CE8223D36F6E00D6BE85 /* AppDelegate.swift */,
 				F248CE8423D36F6E00D6BE85 /* SceneDelegate.swift */,
 				F248CE8823D36F6E00D6BE85 /* Main.storyboard */,
 				F248CE8B23D36F6F00D6BE85 /* Assets.xcassets */,
 				F248CE8D23D36F6F00D6BE85 /* LaunchScreen.storyboard */,
 				F248CE9023D36F6F00D6BE85 /* Info.plist */,
-				F248CE9623D3700C00D6BE85 /* MainViewController.swift */,
-				F248CE9823D3729700D6BE85 /* YoutubeItem.swift */,
-				F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */,
-				F248CE9C23D386FA00D6BE85 /* DownloadUtils.swift */,
-				F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */,
-				F2082B9623D419E7007DFD25 /* ApiClient.swift */,
-				F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */,
-				F29D381823DE8FE200384C73 /* DownloadedViewController.swift */,
 			);
 			path = MyYoutube;
+			sourceTree = "<group>";
+		};
+		F264443724349F5B007A6CD2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F2B8F5822434952F0093BF13 /* PlayerManager.swift */,
+				F248CE9A23D3762F00D6BE85 /* SummaryCell.swift */,
+				F2082B9623D419E7007DFD25 /* ApiClient.swift */,
+				F2B8F5832434952F0093BF13 /* DownloadUtils.swift */,
+				F248CE9823D3729700D6BE85 /* YoutubeItem.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F264443824349F7A007A6CD2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F2BF67DD23DE1E60009DF469 /* LoadingCell.swift */,
+				F248CE9623D3700C00D6BE85 /* MainViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F264443924349F83007A6CD2 /* Downloaded */ = {
+			isa = PBXGroup;
+			children = (
+				F29D381823DE8FE200384C73 /* DownloadedViewController.swift */,
+			);
+			path = Downloaded;
+			sourceTree = "<group>";
+		};
+		F264443A24349FBA007A6CD2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F248CE9E23D38A4900D6BE85 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F264443D2434AED7007A6CD2 /* MiniPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F264443B2434A355007A6CD2 /* MiniPlayerView.swift */,
+			);
+			path = MiniPlayer;
+			sourceTree = "<group>";
+		};
+		F2B8F57F243488A00093BF13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2B8F580243488A70093BF13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2B8F581243488B70093BF13 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F2B8F580243488A70093BF13 /* View */,
+				F2B8F57F243488A00093BF13 /* Model */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +201,7 @@
 			);
 			name = MyYoutube;
 			productName = MyYoutube;
-			productReference = F248CE7F23D36F6E00D6BE85 /* MyYoutube.app */;
+			productReference = F248CE7F23D36F6E00D6BE85 /* Listen Youtube.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F264443C2434A355007A6CD2 /* MiniPlayerView.swift in Sources */,
+				F2B8F5842434952F0093BF13 /* PlayerManager.swift in Sources */,
 				F248CE9923D3729700D6BE85 /* YoutubeItem.swift in Sources */,
-				F248CE9D23D386FA00D6BE85 /* DownloadUtils.swift in Sources */,
 				F248CE8323D36F6E00D6BE85 /* AppDelegate.swift in Sources */,
+				F2B8F5852434952F0093BF13 /* DownloadUtils.swift in Sources */,
 				F2082B9723D419E7007DFD25 /* ApiClient.swift in Sources */,
 				F248CE8523D36F6E00D6BE85 /* SceneDelegate.swift in Sources */,
 				F248CE9723D3700C00D6BE85 /* MainViewController.swift in Sources */,
@@ -389,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chung2014.MyYoutube;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Listen Youtube";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chung2014.MyYoutube;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Listen Youtube";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

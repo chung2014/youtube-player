@@ -16,63 +16,62 @@ class DetailViewController: UIViewController {
     let realm = try! Realm()
     
     var item: YoutubeItem!
-    var songPlayer = AVAudioPlayer()
+//    var songPlayer = AVAudioPlayer()
     var isSongReady = false {
         didSet {
             if isSongReady {
                 prepareSongAndSession()
                 self.downloadStatusLabel.text = "Downloaded"
+                playButton.isEnabled = true
+                
             }
         }
     }
+    
+    var thumbnailUrlString: String {
+        return item.thumbnail
+    }
+    
+    var titleString: String {
+        return item.title
+    }
+    
+    var localUrl: URL?
+    
+    @IBOutlet weak var playButton: UIButton!
     
     @IBOutlet weak var downloadStatusLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    
     func prepareSongAndSession() {
-        do {
-            let url = DownloadUtils.shared.getSaveFileUrl(fileName: item.id)
-            
-//            let asset = AVURLAsset(url: url)
-//            let audioDuration = asset.duration
-//            audioLength = CMTimeGetSeconds(audioDuration)
-            
-            songPlayer = try AVAudioPlayer(contentsOf: url)
-            songPlayer.prepareToPlay()
-            songPlayer.numberOfLoops = -1
-            
-            let audioSession = AVAudioSession.sharedInstance()
-            do {
-                try audioSession.setCategory(AVAudioSession.Category.playback)
-                
-            } catch {
-                print("setCategory error")
-                print(error)
-            }
-        } catch {
-            print("create AVAudioPlayer error")
-            print(error)
-        }
+        localUrl = DownloadUtils.shared.getSaveFileUrl(fileName: item.id)
     }
     
     @IBAction func playClicked(_ sender: Any) {
         if !isSongReady { return }
-        songPlayer.play()
+        guard let url = localUrl else { return }
+        do {
+            try PlayerManager.shared.playSong(url: url)
+            
+            MiniPlayerView.shared.show(thumbnailUrlString: thumbnailUrlString, title: titleString)
+            
+        } catch {
+            print("error ", error)
+        }
     }
     
     @IBAction func pauseClicked(_ sender: Any) {
-        if songPlayer.isPlaying {
-            songPlayer.pause()
-        } else {
-        }
+        PlayerManager.shared.toggleplaySong()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.playButton.isEnabled = false
         imageView.sd_setImage(with: URL(string: item.thumbnail)!, completed: nil)
 //        self.view.backgroundColor = UIColor.yellow
         titleLabel.text = item.title
