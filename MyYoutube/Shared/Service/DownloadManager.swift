@@ -9,8 +9,8 @@
 import Foundation
 import Alamofire
 
-class DownloadUtils {
-    static let shared = DownloadUtils()
+class DownloadManager {
+    static let shared = DownloadManager()
         
     private init() {}
     

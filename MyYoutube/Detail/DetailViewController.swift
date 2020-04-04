@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
     
     
     func prepareSongAndSession() {
-        localUrl = DownloadUtils.shared.getSaveFileUrl(fileName: item.id)
+        localUrl = DownloadManager.shared.getSaveFileUrl(fileName: item.id)
     }
     
     @IBAction func playClicked(_ sender: Any) {
@@ -80,11 +80,11 @@ class DetailViewController: UIViewController {
         descLabel.numberOfLines = 0
         print(item.id)
         // TODO: change to check db
-        if DownloadUtils.shared.checkVideoExist(videoId: item.id) {
+        if DownloadManager.shared.checkVideoExist(videoId: item.id) {
             self.isSongReady = true
         } else {
             self.downloadStatusLabel.text = "Start Downloading..."
-            DownloadUtils.shared.startDownload(videoId: item.id, completed: { [weak self] (errorMsg, filePath) in
+            DownloadManager.shared.startDownload(videoId: item.id, completed: { [weak self] (errorMsg, filePath) in
                 DispatchQueue.main.async {
                     guard let self = self else { return }
                     if let errorMsg = errorMsg {
