@@ -103,7 +103,6 @@
 				F264443924349F83007A6CD2 /* Downloaded */,
 				F264443824349F7A007A6CD2 /* Search */,
 				F264443724349F5B007A6CD2 /* Shared */,
-				F2B8F581243488B70093BF13 /* Player */,
 				F248CE8223D36F6E00D6BE85 /* AppDelegate.swift */,
 				F248CE8423D36F6E00D6BE85 /* SceneDelegate.swift */,
 				F248CE8823D36F6E00D6BE85 /* Main.storyboard */,
@@ -157,29 +156,6 @@
 				F264443B2434A355007A6CD2 /* MiniPlayerView.swift */,
 			);
 			path = MiniPlayer;
-			sourceTree = "<group>";
-		};
-		F2B8F57F243488A00093BF13 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F2B8F580243488A70093BF13 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F2B8F581243488B70093BF13 /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				F2B8F580243488A70093BF13 /* View */,
-				F2B8F57F243488A00093BF13 /* Model */,
-			);
-			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
